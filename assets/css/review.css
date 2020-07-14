@@ -1,0 +1,23 @@
+/* Star
+======================================= */
+.rating {
+  direction: rtl;
+  font-size: 16px;
+	text-align: left;
+}
+.rating > .star {
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  position: relative;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.rating > .star:before {
+	content: '\f005';
+	font-weight: 400;
+}
+.rating > .star:hover:before, .rating > .star:hover ~ .star:before, .rating > .star.selected:before, .rating > .star.selected ~ .star:before {
+  color: #000;
+	content: '\f005';
+	font-weight: 800;
+}

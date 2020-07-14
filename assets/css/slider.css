@@ -1,0 +1,127 @@
+#block-for-slider {
+	display: flex;
+	justify-content: center;
+	/* width: 70%; */
+	/* max-width: 800px; */
+	/* max-height: 720px;
+	min-height: 720px; */
+	/* max-width: 800px;
+	height: auto; */
+	margin: 0 auto;
+}
+#viewport {
+	/* width: 80%; */
+	max-height: 720px;
+	min-height: 720px;
+	position: relative;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	text-align: center;
+}
+#slidewrapper {
+	position: relative;
+	width: calc(100% * 3);
+	-webkit-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+	-webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+	-o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+	transition-timing-function: cubic-bezier(.67,.01,.23,1);
+}
+#slidewrapper, #slidewrapper ul, #slidewrapper li {
+	margin: 0;
+	padding: 0;
+}
+.slide {
+	width: calc(100% / 3);
+	list-style: none;
+	display: inline;
+	float: left;
+}
+.slide-img {
+	/* width: 100%; */
+	max-width: 720px;
+	min-width: 720px;
+	max-height: 720px;
+	min-height: 720px;
+}
+#prev-btn, #next-btn {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 180px;
+	height: 50px;
+	/* background-color: #fff;
+	border-radius: 50%; */
+	top: calc(50% - 25px);
+}
+#prev-btn:hover, #next-btn:hover {
+	cursor: pointer;
+}
+#prev-btn {
+	left: 20px;
+}
+#next-btn {
+	right: 20px;
+}
+#nav-btns {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+.slide-nav-btn {
+	position: relative;
+	display: inline-block;
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin: 3px;
+}
+.slide-nav-btn:hover {
+	cursor: pointer;
+}
+#pager {
+	position: absolute;
+	z-index: 6;
+	padding: 0 0 0 0px;
+	left: 0;
+	align-items: center;
+}
+#pager a {
+	display: block;
+	width: 100px;
+  cursor: pointer;
+}
+#pager a:hover, #pager a.active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+	opacity: 0.5;
+}
+/* .prev {
+} */
+.prev img {
+	border: 1px solid #000;
+	margin: 0 0 20px 20px;
+}
+#pager-mobile {
+	display: none;
+	justify-content: center;
+	z-index: 6;
+	padding: 0 0 0 0px;
+	left: 0;
+	align-items: center;
+}
+#pager-mobile a {
+	display: inline-block;
+	width: 100px;
+  cursor: pointer;
+}
